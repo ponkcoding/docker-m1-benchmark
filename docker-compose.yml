@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  angular-m1:
+    build: 
+        context: angular/.
+        dockerfile: Dockerfile.m1
+    ports:
+      - '1001:3000'
+    volumes:
+      - ./:/usr/src/app
+    command: npm run start

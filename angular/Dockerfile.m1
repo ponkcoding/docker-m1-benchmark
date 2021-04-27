@@ -1,0 +1,17 @@
+# force to use intel-based image
+# FROM --platform=linux/amd64 node:15
+
+# force to use ARM-based image
+# FROM --platform=linux/arm64 node:15
+
+# comment this out if you uncomment code above
+FROM node:15
+
+WORKDIR /usr/src/app
+
+COPY ./ /usr/src/app
+RUN npm install
+
+# Set up a default command
+CMD [ "npm", "start" ]
+
