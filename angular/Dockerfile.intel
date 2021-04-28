@@ -1,5 +1,5 @@
-# force to use ARM-based image
-FROM --platform=linux/arm64 node:15
+# force to use intel-based image
+FROM --platform=linux/amd64 node:15
 
 WORKDIR /usr/src/app
 
