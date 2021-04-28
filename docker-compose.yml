@@ -3,7 +3,8 @@ services:
     angular-m1:
         build: 
             context: angular/.
-            dockerfile: Dockerfile.m1
+            args:
+                BUILDPLATFORM: linux/arm64
         ports:
             - "4201:4200"
         volumes:
@@ -11,9 +12,33 @@ services:
     angular-intel:
         build: 
             context: angular/.
-            dockerfile: Dockerfile.intel
+            args:
+                BUILDPLATFORM: linux/amd64
         ports:
             - "4202:4200"
         volumes:
             - ./angular/:/usr/src/app
+    golang-gin-m1:
+        build:
+            context: golang-gin/.
+            args:
+                BUILDPLATFORM: linux/arm64
+        command: gin --immediate --path /app go run hello.go
+        ports:
+            - "5001:3001"
+        working_dir: /app
+        volumes:
+            - ./golang-gin/:/app
+    golang-gin-intel:
+        build:
+            context: golang-gin/.
+            args:
+                BUILDPLATFORM: linux/amd64
+        command: gin --immediate --path /app go run hello.go
+        ports:
+            - "5002:3001"
+        working_dir: /app
+        volumes:
+            - ./golang-gin/:/app
+            
 

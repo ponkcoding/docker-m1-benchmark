@@ -28,8 +28,10 @@ Kita bisa coba mengubah source codenya agar app-nya di rebuild/recompile.
 
 ### URLs
 
-* http://localhost:4201 angular - ARM-based container (amd64)
-* http://localhost:4202 angular - intel-based container (arm64)
+* http://localhost:4201 angular - ARM-based container (arm64)
+* http://localhost:4202 angular - intel-based container (amd64)
+* http://localhost:5001/api/ping/ golang-gin - ARM-based container (arm64)
+* http://localhost:5002/api/ping/ golang-gin - intel-based container (amd64)
 
 ## Build/Compile time benchmark
 | Project  |  ARM-based container | intel-based container  |
