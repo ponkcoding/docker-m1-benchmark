@@ -37,7 +37,7 @@ Kita bisa coba mengubah source codenya agar app-nya di rebuild/recompile.
 ### compile time
 | Project  |  ARM-based container | intel-based container  |
 |---|---|---|
-|  Angular |  30.2s (initial) | 37s  |
+|  Angular (first time up) |  30.2s | 37s  |
 |  Angular |  129ms | 552ms  |
 |  Golang |  26ms |  1.2s |
 
