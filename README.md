@@ -33,12 +33,19 @@ Kita bisa coba mengubah source codenya agar app-nya di rebuild/recompile.
 * http://localhost:5001/api/ping/ golang-gin - ARM-based container (arm64)
 * http://localhost:5002/api/ping/ golang-gin - intel-based container (amd64)
 
-## Build/Compile time benchmark
+## Benchmark
+### compile time
 | Project  |  ARM-based container | intel-based container  |
 |---|---|---|
-|  Angular |   |   |
-|  Golang |   |   |
+|  Angular |  30.2s (initial) | 37s  |
+|  Angular |  129ms | 552ms  |
+|  Golang |  26ms |  1.2s |
 
+### response time (no DB)
+| Project  |  ARM-based container | intel-based container  |
+|---|---|---|
+|  Angular |  7ms |  13ms |
+|  Golang |  8ms |  8ms |
 ## Referensi
 
 * https://angular.io/guide/example-apps-list#tour-of-heroes-tutorial-application
